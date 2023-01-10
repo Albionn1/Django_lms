@@ -9,7 +9,7 @@ function TeacherCourses(){
     const [courseData, setCourseData] = useState([]);
 
     const teacherId = localStorage.getItem('teacherId')
-    console.log(teacherId)
+    
     useEffect(() =>{
         document.title = 'Courses';
 
@@ -39,19 +39,19 @@ function TeacherCourses(){
                                     <tr>
                                         <th>Name</th>
                                         <th>Image</th>
-                                        <th>Created by</th>
+                                        <th>Total Enrolled</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {courseData.map((course, index) => 
                                     <tr>
-                                        <td>{course.title}</td>
+                                        <td><Link to={"/all-chapters/" + course.id}>{course.title}</Link></td>
                                         <td><img src={course.featured_img} width='80' className='rounded' alt={course.title} /></td>
-                                        <td><Link to={'/'}>Albion Berisha</Link></td>
+                                        <td><Link to={'/'}>123</Link></td>
                                         <td>
                                             <button className='btn btn-danger btn-sm'>Delete</button>
-                                            <Link to={'/add-chapter/2'} className='btn btn-success btn-sm ms-2'>Add Chapters</Link>
+                                            <Link className='btn btn-success btn-sm ms-2' to={'/add-chapter/' + course.id} >Add Chapters</Link>
                                         </td>
                                     </tr>
                                     )}

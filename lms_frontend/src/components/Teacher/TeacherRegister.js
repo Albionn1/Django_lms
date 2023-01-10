@@ -39,9 +39,9 @@ function TeacherRegister(){
         teacherFormData.append("skills", teacherData.skills);
 
         try{
-            axios.post(baseUrl, teacherFormData
-                
-            ).then((response) => {
+            axios.post(baseUrl, teacherFormData, {
+                headers: {'Authorization': 'Token 11982a75535052e919ccbf0cf09d0640e653f57f'},
+            }).then((response) => {
                 setTeacherData({
                     'full_name' : '',
                     'email' : '',
