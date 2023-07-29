@@ -5,8 +5,14 @@ from tabnanny import verbose
 from unittest.util import _MAX_LENGTH
 from django.db import models
 
+class Shteti(models.Model):
+    emri = models.TextField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = "6. Shteti"
 #Teacher Model
 class Teacher(models.Model):
+    shteti = models.ForeignKey(Shteti, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
@@ -64,3 +70,4 @@ class Student(models.Model):
 
     class Meta:
         verbose_name_plural = "5. Students"
+

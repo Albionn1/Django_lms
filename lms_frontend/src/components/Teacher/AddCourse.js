@@ -18,7 +18,7 @@ function AddCourse(){
 
             try{
                 axios.get(baseUrl + '/category', {
-                    headers: {'Authorization': 'Token 11982a75535052e919ccbf0cf09d0640e653f57f'},
+                    headers: {'Authorization': 'Token ed5c1ab8fd1f466978049d422c6adf3ff1241e58'},
                 }).then((response) => {
                     setCats(response.data)
                 })
@@ -53,7 +53,7 @@ function AddCourse(){
         try{
             axios.post(baseUrl + '/course/', _formData, {
                 headers: {
-                'Authorization': 'Token 11982a75535052e919ccbf0cf09d0640e653f57f',
+                'Authorization': 'Token ed5c1ab8fd1f466978049d422c6adf3ff1241e58',
                 //'content-type': 'multipart/form-data' //Me hek qita bon me ba POST nServer sdi pse
                 }
             }).then((response) => {

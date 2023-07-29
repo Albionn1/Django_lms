@@ -12,6 +12,7 @@ function TeacherSidebar(){
                     <Link to={'/teacher-profile-setting'} className='list-group-item list-group-item-action'>Profile Settings</Link>
                     <Link to={'/teacher-change-password'} className='list-group-item list-group-item-action'>Change Password</Link>
                     <Link to={'/teacher-login'} className='list-group-item list-group-item-action text-danger'>Logout</Link>
+                    <Link to={'/choose-shteti'} className='list-group-item list-group-item-action'>Shteti</Link>
                 </div>
             </div>
 

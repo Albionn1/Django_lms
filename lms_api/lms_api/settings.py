@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_lms',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'AlbionRoot',
         'HOST': 'localhost',
         'PORT': '3306',
     }

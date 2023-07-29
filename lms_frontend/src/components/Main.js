@@ -38,6 +38,10 @@ import TeacherLogout from './Teacher/TeacherLogout';
 import AddChapter from './Teacher/AddChapter';
 import AllChapters from './Teacher/CourseChapters'
 
+//SHTETI
+
+import ChooseShteti from './Teacher/chooseShteti';
+
 
 
 function Main() {
@@ -74,6 +78,8 @@ function Main() {
         <Route path='/teacher-users' element={<UserList />} />
         <Route path='/add-course' element={<AddCourse />} />
         <Route path="/teacher-detail/:teacher_id" element={<TeacherDetail />} />
+
+        <Route path='/choose-shteti' element={<ChooseShteti />} />
       </Switch>
       <Footer />
     </div>

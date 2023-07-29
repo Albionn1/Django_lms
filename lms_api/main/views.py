@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import generics
 from rest_framework import permissions
-from .serializers import TeacherSerializer, CategorySerializer, CourseSerializer, ChapterSerializer
+from .serializers import TeacherSerializer, CategorySerializer, CourseSerializer, ChapterSerializer, ShtetiSerializer
 from . import models
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -61,4 +61,7 @@ class CourseChapterList(generics.ListAPIView):
         course = models.Course.objects.get(pk = course_id)
         return models.Chapter.objects.filter(course = course)
 
+class ShtetiList(generics.ListCreateAPIView):
+    queryset = models.Shteti.objects.all()
+    serializer_class = ShtetiSerializer
 

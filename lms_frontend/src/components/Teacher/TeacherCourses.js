@@ -15,7 +15,7 @@ function TeacherCourses(){
 
         try{
             axios.get(baseUrl + '/teacher-courses/' + teacherId, {
-                headers: {'Authorization': 'Token 11982a75535052e919ccbf0cf09d0640e653f57f'}
+                headers: {'Authorization': 'Token ed5c1ab8fd1f466978049d422c6adf3ff1241e58'}
             }).then((response) => {
                 setCourseData(response.data)
             })

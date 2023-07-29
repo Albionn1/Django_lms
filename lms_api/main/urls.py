@@ -24,6 +24,9 @@ urlpatterns = [
 
     #Teacher Courses
     path('teacher-courses/<int:teacher_id>', views.TeacherCourseList.as_view()),
+
+    #Shteti
+    path('choose-shteti', views.ShtetiList.as_view()),
 ]
 
 
